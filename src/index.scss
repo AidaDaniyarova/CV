@@ -1,0 +1,10 @@
+@use './assets/styles/reset';
+@use './assets/styles/fonts';
+@use './assets/styles/variables' as *;
+
+body {
+  font-family: $font-primary;
+  background: $color-bg-content;
+  color: $color-text-primary;
+  font-size: $font-size-base;
+}

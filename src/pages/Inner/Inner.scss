@@ -1,0 +1,54 @@
+@use '../../assets/styles/variables' as *;
+
+.inner {
+  display: flex;
+  min-height: 100vh;
+  background: $color-bg-content;
+  position: relative;
+
+  &__content {
+    flex: 1;
+    padding: 60px 60px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+
+    @include mobile {
+      padding: 80px 40px;
+    }
+  }
+
+  &__section {
+    scroll-margin-top: 30px;
+  }
+
+  &__back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 0;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: $color-oxford-blue;
+    color: $color-white;
+
+    border-radius: 2px;
+    cursor: pointer;
+
+    transition: background .2s ease;
+
+    &:hover {
+      background:$color-shamrock;
+    }
+
+    svg {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@use '../../assets/styles/variables' as *;
+
+.panel {
+  background: $color-oxford-blue;
+  display: flex;
+  flex-direction: column;
+  transition: $transition-base;
+  overflow: hidden;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+
+  @include desktop {
+    width: $panel-width;
+    flex-shrink: 0;
+
+    &--closed {
+      width: 0;
+    }
+  }
+
+  @include mobile {
+    max-width: 54px;
+    z-index: 50;
+    transform: translateX(0);
+
+
+    &--closed {
+      width: 0;
+      transform: translateX(-100%);
+    }
+
+    span, h2, p {
+      display: none;
+    }
+
+    img {
+      width: 40px;
+      height: 40px; 
+    }
+  }
+
+  &__go-back {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    padding: 20px 20px;
+    font-size: $font-size-xs;
+    color: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid $color-border-dark;
+    transition: $transition-base;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  &__toggle {
+    position: fixed;
+    top: 20px;
+    z-index: 100;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+
+    background: $color-oxford-blue;
+    color: $color-white;
+
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+
+    transition:
+      left .35s ease,
+      transform .35s ease,
+      background .2s ease;
+
+    &:hover {
+      background: $color-shamrock;
+    }
+
+    svg {
+      font-size: 15px;
+    }
+
+    &--open {
+      left: calc(#{$panel-width} - 2px);
+    }
+
+    &--closed {
+      left: 20px;
+    }
+
+    @include mobile {
+      &--open {
+        left: calc(#{$panel-width} - 15px);
+      }
+
+      &--closed {
+        left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@use '../../assets/styles/variables' as *;
+
+.navigation {
+  font-size: 16px;
+
+  li {
+    display: flex;
+    align-items: center;
+    color: $color-raven;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+      a {
+        color: $color-raven;
+        text-decoration: none;
+        transition: color .3s ease;
+        &:hover,
+        &.active{
+          color: $color-shamrock;
+          cursor: pointer;
+        }
+
+        
+
+        span {
+          padding: 10px;
+          display: inline-block;
+        }
+      }
+
+    .icon {
+      margin-right: 10px;
+      min-width: 30px;
+      display: inline-block;
+    }
+
+  }
+}
+
+

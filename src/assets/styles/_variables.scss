@@ -1,0 +1,67 @@
+@use 'sass:color';
+
+// Color palette — matches the Figma "main" color styles exactly
+$color-midnight: #000614;      // main/midnight — hero overlay
+$color-oxford-blue: #222935;   // main/oxford-blue — sidebar bg, dark buttons
+$color-shamrock: #26c17e;      // main/shamrock — brand green accent
+$color-raven: #667081;         // main/raven — secondary text, borders
+$color-gallery: #eeeeee;       // main/gallery — light section backgrounds
+$color-white: #ffffff;
+$color-black: #000000;
+$color-red: #ff4d4f;            // main/red — error state
+$color-alto: #dddddd;          // main/alto — light borders
+
+// Semantic aliases used across components
+$color-bg-dark: $color-oxford-blue;
+$color-bg-panel: $color-oxford-blue;
+$color-bg-content: $color-white;
+$color-accent: $color-shamrock;
+$color-accent-hover: color.adjust($color-shamrock, $lightness: -8%);
+$color-text-primary: $color-black;
+$color-text-secondary: $color-raven;
+$color-text-muted: rgba(102, 112, 129, 0.6);
+$color-text-on-dark: $color-white;
+$color-border: $color-alto;
+$color-border-dark: rgba(255, 255, 255, 0.12);
+$color-surface: $color-gallery;
+
+// Typography — Open Sans per Figma
+$font-primary: 'Open Sans', sans-serif;
+$font-size-base: 16px;
+$font-size-sm: 0.875rem;   // 14px — body-norm
+$font-size-xs: 0.75rem;    // 12px — body-second
+$font-size-md: 1rem;       // 16px — body-norm_2
+$font-size-lg: 1.5625rem;  // 25px — body-title_1 (section headings)
+$font-size-xl: 1.75rem;    // 28px
+$font-size-xxl: 2.8125rem; // 45px — hero name
+
+// Layout
+$panel-width: 240px;
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1440px;
+$radius-sm: 5px;
+$radius-md: 8px;
+$radius-lg: 16px;
+
+// Transitions
+$transition-base: all 0.2s ease-in-out;
+
+// Mixins
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}

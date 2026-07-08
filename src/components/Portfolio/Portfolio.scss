@@ -1,0 +1,97 @@
+@use './../../assets/styles/variables' as *;
+
+.tabs {
+  font-size: 16px;
+  margin-bottom: 20px;
+
+  li {
+    display:inline-block;
+    padding: 0 0 0 10px;
+    margin: 0 5px 0 0;
+    position: relative;
+    text-transform: capitalize;
+
+    span {
+      cursor: pointer;
+    }
+
+    &.active {
+      span {
+        color: $color-shamrock;
+      }
+    }
+
+    &:first-child {
+      padding: 0;
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: "/";
+      position: absolute;
+      top:0;
+      left:0;
+    }
+  }
+}
+
+.filter-container {
+  overflow: hidden;
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mobile {
+    justify-content: center;
+  }
+
+
+  li {
+    width: 308px;
+    margin:0 20px 20px 0;
+    position: relative;
+    height: 194px;
+    overflow: hidden;
+
+    .portfolio-info {
+      height: 194px;
+      overflow: auto;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      padding: 20px 15px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid $color-alto;
+      box-sizing: border-box;
+      transition: top 0.5s ease;
+
+      h2,
+      h3 {
+        font: 700 16px/19px 'Open Sans', sans-serif;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      a {
+        text-decoration: underline;
+        color: $color-shamrock;
+      }
+    }
+
+    &:hover {
+      .portfolio-info {
+        top: 0;
+      }
+    }
+  }
+
+  span{
+    display: block;
+  }
+}

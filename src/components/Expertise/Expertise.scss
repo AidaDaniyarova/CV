@@ -1,0 +1,25 @@
+@use '../../assets/styles/variables' as *;
+
+.expertise-list {
+  &-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  &-date {
+    min-width: 100px;
+    margin-right: 20px;
+
+    span{
+      color: $color-raven;
+      font-size: 16px;
+    }
+  }
+
+  h3 {
+    font:700 16px/19px 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+  }
+
+}

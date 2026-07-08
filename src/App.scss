@@ -1,0 +1,33 @@
+@use './assets/styles/variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: $color-oxford-blue;
+}
+
+// Responsive 
+@media (max-width: 599px) {
+  .panel span {  
+    &.open { left: 0; } 
+    
+    .photo-box { display: none; }
+  }
+  .navigation li a span { display: none; }
+  .navigation li {
+    padding: 0;
+    justify-content: center;
+  }
+  .panel__toggle--open {
+    left: 53px;
+  }
+}

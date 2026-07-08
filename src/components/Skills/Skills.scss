@@ -1,0 +1,112 @@
+@use '../../assets/styles/variables' as *;
+
+.skills {
+  .info-box {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .skills__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  h2 {
+    margin: 0;
+  }
+}
+  &__edit-btn {
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    min-width: 90px;
+    height: 32px;
+    padding: 0 14px;
+    background: $color-shamrock;
+    border-radius: $radius-sm;
+  }
+
+  &__name {
+    font-size: $font-size-xs;
+    font-weight: 700;
+    color: $color-white;
+    white-space: nowrap;
+  }
+
+  &__scale {
+  margin-top: 20px;
+  }
+
+  &__labels {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $color-alto;
+    padding-top: 8px;
+    font-size: $font-size-xs;
+    color: $color-text-secondary;
+  }
+
+  &__line {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background: $color-text-secondary;
+  }
+}
+
+.tick {
+  position: absolute;
+  top: -5px;
+  width: 1px;
+  height: 6px;
+  background: $color-text-secondary;
+}
+
+.tick-1 {
+  left: 0;
+}
+
+.tick-2 {
+  left: 35%;
+}
+
+.tick-3 {
+  left: 67%;
+}
+
+.tick-4 {
+  right: 0;
+}
+
+.skills-chart {
+	.skill-bar { margin-bottom: 15px;
+	.skill-name { font-weight: 700;
+	margin-bottom: 5px;
+}
+.skill-track {
+	background: $color-gallery;
+	height: 24px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.skill-fill {
+	background: $color-shamrock;
+	height: 100%;
+	color: $color-white;
+	display: flex;
+	align-items: center;
+	padding-left: 10px;
+	transition: width 0.5s;
+}
+  }}

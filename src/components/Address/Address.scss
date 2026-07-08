@@ -1,0 +1,38 @@
+@use './../../assets/styles/variables' as *;
+
+.address {
+  dl {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+
+    a {
+      color: $color-oxford-blue;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    dd {
+      display: flex;
+      flex-direction: column;
+      a {
+        text-decoration: none;
+        color: $color-oxford-blue;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    dt {
+      margin-right: 10px;
+      color: $color-shamrock;
+      font-size:24px;
+      min-width: 50px;
+    }
+  }
+}

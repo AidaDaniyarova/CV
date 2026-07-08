@@ -1,0 +1,52 @@
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faBars,
+  faTimes,
+  faChevronLeft,
+  faChevronUp,
+  faSyncAlt,
+  faEnvelope,
+  faPhone,
+  faMapMarkerAlt,
+  faStar,
+  faUser,
+  faGraduationCap,
+  faPen,
+  faGem,
+  faBriefcase,
+  faLocationArrow,
+  faComment,
+  faLink,
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faGithub,
+  faLinkedin,
+  faTwitter,
+  faFacebook,
+  faSkype,
+} from '@fortawesome/free-brands-svg-icons';
+
+library.add(
+  faBars,
+  faTimes,
+  faChevronLeft,
+  faChevronUp,
+  faSyncAlt,
+  faEnvelope,
+  faPhone,
+  faMapMarkerAlt,
+  faStar,
+  faUser,
+  faGraduationCap,
+  faPen,
+  faGem,
+  faBriefcase,
+  faLocationArrow,
+  faComment,
+  faLink,
+  faGithub,
+  faLinkedin,
+  faTwitter,
+  faFacebook,
+  faSkype
+);

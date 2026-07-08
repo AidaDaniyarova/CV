@@ -1,0 +1,39 @@
+@use '../../assets/styles/variables' as *;
+
+.feedback {
+  li {
+    margin-bottom: 40px;
+    list-style: none;
+  }
+
+  .info {
+    margin-bottom: 10px;
+  }
+
+  &__reporter {
+    display: flex;
+    align-items: center;
+
+    &__cite a {
+      color: $color-shamrock;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__photo {
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+      border-radius: 50%;
+      margin-right: 20px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
