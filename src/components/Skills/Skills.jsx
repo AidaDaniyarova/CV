@@ -7,7 +7,7 @@ import SkillsForm from './SkillsForm/SkillsForm';
 import './Skills.scss';
 import Button from '../Button/Button';
 
-const Skills  = ({ isEditing }) => {
+const Skills  = ({ isEditing, setIsEditing }) => {
   const dispatch = useDispatch();
   const { items, status } = useSelector((state) => state.skills);
 
