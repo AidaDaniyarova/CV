@@ -41,24 +41,6 @@ const Inner = () => {
     dispatch(fetchEducations());
   }, [dispatch]);
 
-  let educationContent;
-
-  if (status === 'loading') {
-    educationContent = (
-      <div className="loading-container">
-        <FontAwesomeIcon className="icon spin" icon={faSyncAlt} />
-      </div>
-    );
-  } else if (status === 'failed') {
-    educationContent = (
-      <div className="error-container">
-        Something went wrong; please review your server connection!
-      </div>
-    );
-  } else if (status === 'succeeded') {
-    educationContent = <TimeLine data={items} />;
-  }
-
   return (
       <div className="inner">
         <Panel owner={owner} activeId={activeId} onNavigate={setActiveId} />
@@ -72,7 +54,11 @@ const Inner = () => {
   
           <section id="education" className="inner__section">
             <Box title="Education">
-              <TimeLine data={educationData} />
+              <TimeLine
+                data={items}
+                status={status}
+                error={error}
+              />
             </Box>
           </section>
   

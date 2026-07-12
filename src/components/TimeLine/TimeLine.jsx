@@ -32,7 +32,7 @@ export const TimeLine = ({ data, status, error }) => {
             <div className="general-event timeline-event">
               <div className="info">
                 <h3>{event.title}</h3>
-                <p>{event.text}</p>
+                <p>{event.description}</p>
               </div>
             </div>
           </li>
