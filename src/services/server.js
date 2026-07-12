@@ -1,4 +1,5 @@
 import { createServer, Model } from 'miragejs';
+import { educationData, skillsData } from '../data/resumeData';
 
 export function makeServer({ environment = 'development' } = {}) {
   let server = createServer({
@@ -9,15 +10,20 @@ export function makeServer({ environment = 'development' } = {}) {
     },
 
     seeds(server) {
-      server.create('education', { date: '1990', title: 'Title 1', description: 'Lorem ipsum dolor sit amet.' });
-      server.create('education', { date: '1991', title: 'Title 2', description: 'Consectetuer adipiscing elit.' });
-      server.create('education', { date: '1992', title: 'Title 3', description: 'Aenean commodo ligula eget dolor.' });
+      educationData.forEach(item => {
+        server.create('education', {
+          date: item.date,
+          title: item.title,
+          description: item.text,
+        });
+      });
 
-      server.create('skill', { name: 'HTML', range: 95 });
-      server.create('skill', { name: 'CSS', range: 80 });
-      server.create('skill', { name: 'jQuery', range: 70 });
-      server.create('skill', { name: 'PHP', range: 40 });
-      server.create('skill', { name: 'Laravel 2 (framework)', range: 20 });
+      skillsData.forEach(skill => {
+        server.create('skill', {
+          name: skill.name,
+          range: skill.range,
+        });
+      });
     },
 
     routes() {
