@@ -4,6 +4,7 @@ import { educationData, skillsData } from '../data/resumeData';
 export function makeServer({ environment = 'development' } = {}) {
   let server = createServer({
     environment,
+    logging: false,
     models: {
       education: Model,
       skill: Model,
@@ -28,7 +29,7 @@ export function makeServer({ environment = 'development' } = {}) {
 
     routes() {
       this.namespace = 'api';
-      this.timing = 3000; // 3-second delay
+      this.timing = 400; // short delay so the loading state is still visible
 
       this.get('/educations', (schema) => {
         return schema.educations.all();
