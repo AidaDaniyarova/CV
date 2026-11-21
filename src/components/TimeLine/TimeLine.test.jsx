@@ -7,12 +7,12 @@ describe('TimeLine', () => {
     {
       date: '2024',
       title: 'Started University',
-      text: 'Computer Science',
+      description: 'Computer Science',
     },
     {
       date: '2025',
       title: 'Internship',
-      text: 'Java Backend Developer',
+      description: 'Java Backend Developer',
     },
   ];
 

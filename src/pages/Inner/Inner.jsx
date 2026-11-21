@@ -31,6 +31,7 @@ const Inner = () => {
   const { items, status, error } = useSelector((state) => state.education);
   const [isEditingSkills, setIsEditingSkills] = useState(false);
   const [activeId, setActiveId] = useState('about');
+  const hasFeedback = feedbackData.length > 0;
   
     const handleBackToTop = () => {
       setActiveId(null);
@@ -43,7 +44,12 @@ const Inner = () => {
 
   return (
       <div className="inner">
-        <Panel owner={owner} activeId={activeId} onNavigate={setActiveId} />
+        <Panel
+          owner={owner}
+          activeId={activeId}
+          onNavigate={setActiveId}
+          hiddenNavIds={hasFeedback ? [] : ['feedback']}
+        />
   
         <main className="inner__content">
           <section id="about" className="inner__section">
@@ -100,11 +106,13 @@ const Inner = () => {
             </Box>
           </section>
   
-          <section id="feedback" className="inner__section">
-            <Box title="Feedback">
-              <Feedback data={feedbackData} />
-            </Box>
-          </section>
+          {hasFeedback && (
+            <section id="feedback" className="inner__section">
+              <Box title="Feedback">
+                <Feedback data={feedbackData} />
+              </Box>
+            </section>
+          )}
         </main>
   
         <Button

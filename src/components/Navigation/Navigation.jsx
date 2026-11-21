@@ -28,7 +28,7 @@ const NAV_ITEMS = [
  * externally (e.g. reset by the back-to-top button). Labels are hidden by
  * CSS alone below 600px, leaving an icon-only rail.
  */
-function Navigation({ onNavigate, activeId: controlledActiveId }) {
+function Navigation({ onNavigate, activeId: controlledActiveId, hiddenIds = [] }) {
   const [internalActiveId, setInternalActiveId] = useState('about');
   const activeId = controlledActiveId !== undefined ? controlledActiveId : internalActiveId;
 
@@ -39,7 +39,7 @@ function Navigation({ onNavigate, activeId: controlledActiveId }) {
 
   return (
     <ul className="navigation">
-      {NAV_ITEMS.map((item) => (
+      {NAV_ITEMS.filter((item) => !hiddenIds.includes(item.id)).map((item) => (
         <li key={item.id}>
           <a
             href={`#${item.id}`}
@@ -60,6 +60,7 @@ function Navigation({ onNavigate, activeId: controlledActiveId }) {
 Navigation.propTypes = {
   onNavigate: PropTypes.func,
   activeId: PropTypes.string,
+  hiddenIds: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Navigation;

@@ -1,73 +1,69 @@
 import {
   faEnvelope,
-  faPhone,
   faCompass,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
   faGithub,
   faLinkedin,
-  faTwitter,
-  faSkype,
-  faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
 export const owner = {
   name: 'Aida Daniyarova',
-  title: 'Software Engineer',
+  title: 'Graduate Software Engineer',
   description:
-    'Computer Science student with hands-on experience in Java (Spring Boot), REST APIs, PostgreSQL, and full-stack web applications.',
-  // No photo supplied — generated initials avatar as a placeholder.
-  // Swap for a real headshot in src/assets/images and update this path.
-  avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'First-Class Computer Science graduate building full-stack applications with Java (Spring Boot), Python (Django REST) and React/TypeScript.',
+  // GitHub profile picture. To use a different headshot, add it to
+  // src/assets/images and update this path.
+  avatar: 'https://github.com/AidaDaniyarova.png',
 };
 
 export const heroTagline =
-  'Building secure, high-availability backend systems and AI-powered full-stack platforms — with a keen interest in electronic trading and financial markets technology.';
+  'Building secure backend services and AI-powered full-stack applications with Java, Python and React.';
 
 export const aboutText =
-  "Motivated, self-directed Computer Science student at De Montfort University (92% GPA) with hands-on experience in Java (Spring Boot), REST API development, PostgreSQL, and full-stack web applications. Proven ability to design secure, high-availability backend systems with JWT authentication and role-based access control. Final Year Project involved architecting a production-grade AI-powered platform using Django, React, PostgreSQL, and NLP pipelines, directly analogous to building intelligent trading and automation tools. Keen interest in electronic trading and financial markets technology.";
+  "First-Class Computer Science graduate from De Montfort University (92%, Best Final Year Student Prize 2026) based in London. I build full-stack applications with Java (Spring Boot), Python (Django REST Framework) and React/TypeScript. In a Java backend internship I built REST APIs with JWT authentication and role-based access control; at JMart (Jusan Bank) I shipped reusable React and TypeScript components for a production fintech app. For my final year project I built, on my own, an AI career platform with skill extraction, ATS scoring and CV export (mark 91%). I'm looking for a graduate or junior software engineering role in London.";
 
 export const educationData = [
   {
     date: 2023,
-    title: 'BSc (Hons) Computer Science — De Montfort University, Leicester',
-    text: 'Started a Computer Science degree, building a foundation in object-oriented design, data structures and algorithms, and web application development.',
+    title: 'Started BSc (Hons) Computing Science, De Montfort University',
+    text: 'First year (92% average): Computer Programming (99%), Database Design and Implementation, Fundamental Concepts of Computer Science, Operating Systems and Networks.',
   },
   {
     date: 2024,
-    title: 'AWS Academy Cloud Foundations, Palo Alto Networks Cybersecurity Foundation',
-    text: 'Completed cloud and cybersecurity foundations coursework alongside the DMUK Carbon Literacy Workshop.',
+    title: 'Second year, plus Palo Alto Networks Cybersecurity Foundation',
+    text: 'Second year (93% average): Object-Oriented Design and Development (97%), Agile Development Team Project (95%), Data Structures and Algorithms, Web Application Development. Also completed the DMU Carbon Literacy Project.',
   },
   {
     date: 2025,
-    title: 'Red Hat System Administration I (RH124), Samsung Innovation Campus',
-    text: 'Completed Red Hat RH124, BlackBerry Security Awareness Training, and the Samsung Innovation Campus Coding & Programming course.',
+    title: 'AWS Academy Cloud Foundations, Red Hat System Administration I (RH124)',
+    text: 'Also completed the Samsung Innovation Campus Coding and Programming course and BlackBerry Security Awareness Training.',
   },
   {
     date: 2026,
-    title: 'BSc (Hons) Computer Science — Expected Graduation',
-    text: 'Relevant modules: Object-Oriented Design & Development (Java), Data Structures & Algorithms, Web Application Development, Agile Team Project (Django, PostgreSQL), Database Design & Implementation (MySQL), Operating Systems & Networks.',
+    title: 'Graduated with First-Class Honours (92%), Best Final Year Student Prize',
+    text: 'Final year (91% average): Software Development Methods and Standards (95%), Development Project (91%), Big Data and Machine Learning, Advanced Web Development. Also completed EPAM Front-End Development with AI Tools and Databricks Generative AI Fundamentals.',
   },
 ];
 
 export const experienceData = [
   {
-    date: '2025-Present',
+    date: '2025 - Present',
     info: {
-      company: 'Orda Tau',
-      job: 'IT Specialist',
+      company: 'LLP Orda Tau',
+      job: 'IT Specialist (remote, part-time)',
       description:
-        'Automated digital certificate creation, signing, and distribution, achieving a 25% efficiency improvement. Coordinated cross-departmental virtual meetings with 10+ IT specialists, resolving 15+ technical issues per session.',
+        'Automated digital certificate generation, signing and distribution, improving operational efficiency by 25%. Coordinate cross-department technical meetings with 10+ IT specialists, resolving 15+ technical issues per session.',
     },
   },
   {
     date: '2025',
     info: {
-      company: 'JMart',
+      company: 'JMart (Jusan Bank)',
       job: 'Junior Web Developer (Frontend)',
       description:
-        'Built responsive, high-performance web interfaces using HTML, CSS, JavaScript, and TypeScript in a production fintech environment. Developed dynamic React components to improve user experience and performance, collaborating with senior engineers in agile code reviews.',
+        'Built reusable TypeScript and React components for a production fintech application. Integrated backend APIs into responsive, accessible interfaces and worked in an Agile team with Git workflows and code reviews.',
     },
   },
   {
@@ -76,143 +72,111 @@ export const experienceData = [
       company: 'LLP UCO',
       job: 'Java Backend Developer Intern',
       description:
-        'Designed and tested REST APIs using Spring Boot and Postman. Implemented JWT-based authentication and role-based access control, reducing unauthorised access by 40% in the User Management System. Developed and managed PostgreSQL databases including schema design, query optimisation, and UML diagramming.',
+        'Built backend services and REST APIs with Java, Spring Boot and PostgreSQL, validated with Postman. Implemented JWT authentication and role-based access control, and optimised SQL queries and database schemas.',
+    },
+  },
+  {
+    date: '2023 - 2024',
+    info: {
+      company: 'LLP Bionic.kz',
+      job: 'Assistant to the Director',
+      description:
+        'Drafted protocols, identification cards and certificates; supported technical tasks including online conference setup and workflow automation; ran surveys and analysed the data to improve internal processes.',
     },
   },
 ];
 
 export const skillsData = [
-  { name: 'Java / Spring Boot', range: 90 },
-  { name: 'Python', range: 85 },
-  { name: 'JavaScript / TypeScript', range: 85 },
-  { name: 'React', range: 80 },
-  { name: 'PostgreSQL / MySQL', range: 85 },
-  { name: 'Django REST Framework', range: 75 },
-  { name: 'REST APIs / JWT Auth', range: 88 },
-  { name: 'NLP / Hugging Face / BERT', range: 65 },
+  { name: 'Java / Spring Boot', range: 85 },
+  { name: 'Python / Django REST Framework', range: 85 },
+  { name: 'JavaScript / TypeScript', range: 80 },
+  { name: 'React / Redux', range: 80 },
+  { name: 'PostgreSQL / MySQL / SQL', range: 80 },
+  { name: 'REST APIs / JWT / RBAC', range: 85 },
+  { name: 'Vue 3 / Node.js / Socket.IO', range: 70 },
+  { name: 'NLP / Hugging Face / scikit-learn', range: 65 },
 ];
 
 export const portfolioData = [
   {
     id: 1,
-    title: 'Career Pathway Tracker & CV Builder',
+    title: 'AI Career Pathway Tracker & CV Builder',
     category: 'ai',
     image:
       'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&h=300&q=80',
     description:
-      'Full-stack AI-powered career platform: diagnostic quiz engine, AI recommendation engine, ATS-optimised CV builder, and a hybrid BERT + TF-IDF NLP pipeline for CV analysis and skill-gap detection.',
-    link: 'https://github.com/AidaDaniyarova',
+      'Final year project (91%): Django REST + React/TypeScript platform with a weighted career quiz, progress dashboard, CV builder with PDF/Word export, and a job scanner using a BERT-based NER model, TF-IDF matching and a weighted ATS score.',
+    link: 'https://github.com/AidaDaniyarova/career-pathway-tracker',
   },
   {
     id: 2,
+    title: 'VueChat: Real-Time Chat',
+    category: 'fullstack',
+    image:
+      'https://images.unsplash.com/photo-1611606063065-ee7946f0787a?auto=format&fit=crop&w=400&h=300&q=80',
+    description:
+      'Discord-style chat built with Vue 3, Pinia and Socket.IO: multiple rooms, live online users, typing indicators, emoji picker and dark mode, with a Node.js/Express backend.',
+    link: 'https://github.com/AidaDaniyarova/vue-chat',
+  },
+  {
+    id: 3,
+    title: 'User Management System',
+    category: 'backend',
+    image:
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=400&h=300&q=80',
+    description:
+      'Spring Boot REST API with Spring Security, JWT authentication, role-based access control, Flyway migrations, pagination and caching; tested with Postman and JUnit.',
+    link: 'https://github.com/AidaDaniyarova/user-management',
+  },
+  {
+    id: 4,
     title: 'Student Course Hub',
     category: 'fullstack',
     image:
       'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&h=300&q=80',
     description:
-      'University programme discovery and registration platform with role-based access, admin CRUD workflows, and WCAG2-compliant, mobile-responsive design.',
-    link: 'https://github.com/AidaDaniyarova',
+      'Server-rendered course portal in Deno and SQLite (MVC, custom router) with admin, staff and student roles, bcrypt hashing, secure session cookies, parameterised SQL and accessible design.',
+    link: 'https://github.com/AidaDaniyarova/student_course_hub',
   },
   {
-    id: 3,
-    title: 'ITracker',
-    category: 'backend',
-    image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&h=300&q=80',
-    description:
-      'Django + PostgreSQL app deployed on Render delivering personalised IT career roadmaps, skill assessments, and progress tracking at scale.',
-    link: 'https://github.com/AidaDaniyarova',
-  },
-  // {
-  //   id: 4,
-  //   title: 'User Management System',
-  //   category: 'backend',
-  //   image:
-  //     'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=400&h=300&q=80',
-  //   description:
-  //     'Spring Boot + PostgreSQL system with JWT authentication and role-based access control, reducing unauthorised access by 40%.',
-  //   link: 'https://github.com/AidaDaniyarova',
-  // },
-  {
-    id: 4,
-    title: 'I AM MUSIC — AI Lyrics Annotation',
+    id: 5,
+    title: 'I AM MUSIC: AI Lyrics Annotation',
     category: 'ai',
     image:
       'https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=400&h=300&q=80',
     description:
-      'React + Django REST app with Hugging Face NLP integration enabling real-time AI lyric interpretation and annotation.',
-    link: 'https://github.com/AidaDaniyarova',
+      'React + Django REST app that returns an AI-generated interpretation of any lyric line, using a FLAN-T5 model via the Hugging Face Inference API.',
+    link: 'https://github.com/AidaDaniyarova/iammusic',
   },
 ];
 
-export const feedbackData = [
-  {
-    feedback:
-      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.',
-    reporter: {
-      photoUrl: 'https://i.pravatar.cc/100?img=33',
-      name: 'Jordan Lee',
-      citeUrl: 'somesite.com',
-    },
-  },
-  {
-    feedback:
-      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.',
-    reporter: {
-      photoUrl: 'https://i.pravatar.cc/100?img=45',
-      name: 'Priya Shah',
-      citeUrl: 'somesite.com',
-    },
-  },
-];
+// Add real quotes here (with the person's permission), e.g. from a
+// supervisor or manager. The Feedback section shows a placeholder while empty.
+export const feedbackData = [];
 
 export const contact = [
-  {
-    label: 'Phone',
-    icon: faPhone,
-    value: '+77771234567',
-    href: 'tel:+77771234567',
-  },
   {
     label: 'Email',
     icon: faEnvelope,
     value: 'aida.daniyarova5@gmail.com',
     href: 'mailto:aida.daniyarova5@gmail.com',
   },
-  // {
-  //   label: 'Location',
-  //   icon: faCompass,
-  //   value: 'Leicester, UK',
-  // },
-  // {
-  //   label: 'GitHub',
-  //   icon: faGithub,
-  //   value: 'github.com/AidaDaniyarova',
-  //   href: 'https://github.com/AidaDaniyarova',
-  // },
-  // {
-  //   label: 'LinkedIn',
-  //   icon: faLinkedin,
-  //   value: 'linkedin.com/in/aida-dani',
-  //   href: 'https://linkedin.com/in/aida-dani',
-  // },
   {
-    label: 'Twitter',
-    icon: faTwitter,
-    value: 'twitter.com',
-    href: 'https://twitter.com/',
+    label: 'Location',
+    icon: faCompass,
+    value: 'London, UK',
   },
   {
-    label: 'Skype',
-    icon: faSkype,
-    value: 'join.skype.com/invite/',
-    href: 'https://join.skype.com/invite/',
+    label: 'GitHub',
+    icon: faGithub,
+    value: 'github.com/AidaDaniyarova',
+    href: 'https://github.com/AidaDaniyarova',
   },
   {
-    label: 'Facebook',
-    icon: faFacebook,
-    value: 'facebook.com',
-    href: 'https://facebook.com/',
+    label: 'LinkedIn',
+    icon: faLinkedin,
+    value: 'linkedin.com/in/aida-dani',
+    href: 'https://linkedin.com/in/aida-dani',
   },
 ];
 

@@ -76,4 +76,11 @@ describe('Navigation', () => {
       fireEvent.click(screen.getByText('Feedback'))
     ).not.toThrow();
   });
+
+  it('does not render items listed in hiddenIds', () => {
+    render(<Navigation hiddenIds={['feedback']} />);
+
+    expect(screen.queryByText('Feedback')).not.toBeInTheDocument();
+    expect(screen.getByText('Contacts')).toBeInTheDocument();
+  });
 });

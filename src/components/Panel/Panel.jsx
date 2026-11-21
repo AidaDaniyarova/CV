@@ -18,7 +18,7 @@ import './Panel.scss';
  * hamburger toggle to free up working space (desktop) or act as an
  * off-canvas drawer (mobile).
  */
-function Panel({ owner, activeId, onNavigate }) {
+function Panel({ owner, activeId, onNavigate, hiddenNavIds }) {
   const [isOpen, setIsOpen] = useState(true);
 
   const toggle = () => setIsOpen((prev) => !prev);
@@ -44,7 +44,7 @@ function Panel({ owner, activeId, onNavigate }) {
           description={owner.description}
           avatar={owner.avatar}
         />
-        <Navigation activeId={activeId} onNavigate={onNavigate} />
+        <Navigation activeId={activeId} onNavigate={onNavigate} hiddenIds={hiddenNavIds} />
         <Link to="/" className="panel__go-back">
           <FontAwesomeIcon icon={faChevronLeft} />
           <span>Go back</span>
@@ -63,6 +63,7 @@ Panel.propTypes = {
   }).isRequired,
   activeId: PropTypes.string,
   onNavigate: PropTypes.func,
+  hiddenNavIds: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Panel;
